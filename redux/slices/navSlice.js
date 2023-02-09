@@ -20,4 +20,14 @@ export const navSlice = createSlice({
             state.traveltimeInformation = action.payload;
         }
     }
-})
+});
+
+export const {setOrigin, setDestination, setTravelTimeInformation} = navSlice.actions;
+
+// selectors
+export const selectOrigin = (state) => state.nav.origin;
+export const selectDestination = (state) => state.nav.destination;
+export const selectTravelTimeInformation = (state) => state.nav.traveltimeInformation;
+
+//reducer
+export default navSlice.reducer;
